@@ -1,0 +1,121 @@
+.custom-button-name{
+    margin-left: 8px;
+    text-transform: capitalize;
+}
+.custom-no-margin-botton{
+    margin-bottom: 0;
+}
+.custom-no-margin-top{
+    margin-top: 0;
+}
+.custom-hr{
+    margin: 16px 0 32px;
+}
+
+.custom-form-divider:not(:first-child){
+    margin-top: 40px;
+}
+.custom-inline-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.custom-inline-list li{
+    flex: 50%;
+}
+
+.custom-list-divider{
+    border-bottom: 1px solid #bdbdbd;
+}
+.custom-detail-list-box{
+    padding-right: 16px;
+}
+.custom-text-filename{
+    font-size: 15px;
+    padding-left: 8px;
+    position: relative;
+    top: -2px;
+}
+.custom-card{
+    border: 1px solid #ddd !important;
+}
+.custom-margin-divider{
+    margin: 24px 0;
+}
+.custom-list-highlighted{
+    margin: 24px 0;
+    background: #02b3a1;
+    color: #fff;
+}
+.custom-form-label{
+    margin-bottom: 5px;
+    margin-left: 8px;
+}
+.custom-card-note{
+    background: #f1f5f5;
+    padding: 0 0 16px 0;
+}
+
+.custom-table-1{
+    width: 100%;
+    border: 1px solid #b1b1b1;
+    padding: 8px;
+    text-align: center;
+    border-collapse: collapse;
+}
+.custom-table-1 tr{}
+.custom-table-1 th{
+    padding: 8px 4px;
+    border: 1px solid #b1b1b1;
+}
+.custom-table-1 td{
+    padding: 8px 4px;
+    border: 1px solid #b1b1b1;
+}
+.custom-price-summary{
+    background: #02b3a1;
+    padding-right: 24px;
+    padding-left: 24px !important;
+    color: #fff;
+}
+
+.custom-data-notes{
+    margin-top: 10px !important;
+}
+
+.custom-no-margin-top{
+    margin-top: 0!important;
+}
+
+.custom-no-margin{
+    margin: 0!important;
+}
+
+.custom-data-card{
+    width: 100%;
+}
+.custom-timeline-disabled {
+    pointer-events: none;
+}
+.custom-timeline-disabled .sc-timeline-body{
+    opacity: 70%;
+}
+
+.nonactive{
+    display: none;
+}
+
+.custom-form-labeller {
+    font-size: 14px;
+    /*margin-bottom: 12px;*/
+}
+.custom-important-input {
+    color: #ff6666;
+}
+
+.track-modal {
+    width: 150px !important;
+}
+
+.custom-table-list{}
+.custom-table-list tr{}
+.custom-table-list td{padding: 10px 12px !important;}

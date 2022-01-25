@@ -1,0 +1,795 @@
+:root {
+    --bikinco: #02b3a1;
+}
+
+
+* {
+    margin: auto;
+    padding: auto;
+    box-sizing: border-box;
+    font-family: "Gilroy";
+    /*border: 1px dashed purple;*/
+}
+p{
+    font-size: 4.5mm;
+}
+hr{
+    border: 1px solid #c7c7c7;
+    margin: 2mm 0;
+}
+
+body {
+    background: #d1d7d8;
+}
+.no-margin{
+    margin: 0!important;
+}
+.margin-auto{margin: auto!important;}
+.no-margin-right{margin-right: 0;}
+.no-margin-top{margin-top: 0 !important;}
+.no-margin-bottom{margin-bottom: 0 !important;}
+.no-border{border: none !important;}
+.text-right{text-align: right;}
+.text-center{text-align: center;}
+.text-left{text-align: left;}
+.no-padding{padding: 0!important;}
+
+/* Page Setup */
+page {
+    display: block;
+    background: #fff;
+    box-shadow: 3px 3px 16px rgba(0,0,0,0.17);
+    position: relative;
+}
+
+page[size='A4'][orientation='potrait']{
+    width: 21cm;
+    height: 29.7cm;
+    padding: 0 12mm;
+}
+page[size='A4'][orientation='landscape']{
+    width: 29.7cm;
+    height: 21cm;
+}
+page[size='A5'][orientation='landscape']{
+    width: 21cm;
+    height: 14.8cm;
+    padding: 0 12mm;
+}
+page[size='A4'][orientation='invoice-potrait']{
+    width: 21cm;
+    height: 29.7cm;
+
+}
+.side-padding{
+    padding: 0 12mm;
+}
+page[size='A4'][orientation='potrait']:not(:first-child){
+    margin-top: 10mm;
+}
+page[size='A4'][orientation='invoice-potrait']:not(:first-child){
+    margin-top: 10mm;
+}
+
+.page-mini-label{
+    font-size: 2.6mm;
+    text-transform: uppercase;
+    padding: 1mm 1.5mm;
+    border-radius: 3px;
+    font-weight: 600;
+    margin: .5mm;
+}
+.default-label{
+    background: #00acc1;
+    color: #fff;
+}
+
+.has-paid{
+    background: url(../../../samples/img/paid/paid.png) center;
+    background-repeat: no-repeat;
+    background-size: 14cm;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+/*.page-container{height: 100%;}*/
+.page-grid{
+    display: flex;
+    height: 100%;
+}
+.grid-1{
+    width: 2.375cm;
+    height: 100%;
+}
+.grid-2{
+    width: 4.75cm;
+    height: 100%;
+}
+.grid-3{
+    width: 7.125cm;
+    height: 100%;
+}
+.grid-4{
+    width: 9.5cm;
+    height: 100%;
+}
+.grid-5{
+    width: 11.875cm;
+    height: 100%;
+}
+.grid-6{
+    width: 14.25cm;
+    height: 100%;
+}
+.grid-7{
+    width: 16.625cm;
+    height: 100%;
+}
+.grid-8{
+    width: 19cm;
+    height: 100%;
+}
+.flex-grid{
+    display: flex;
+    flex-wrap: wrap;
+}
+.f-grid-1{
+    width: 100%;
+    margin: 0;
+}
+.f-grid-2{
+    width: 50%;
+    margin: 0;
+}
+.f-grid-3{
+    width: 33.333333%;
+    margin: 0;
+}
+.f-grid-4{
+    width: 25%;
+    margin: 0;
+}
+.f-grid-5{
+    width: 20%;
+    margin: 0;
+}
+.indentation-left{
+    padding-left: 1.5cm;
+}
+.full-width{
+    width: 100%;
+}
+.page-label{
+    /*background: linear-gradient(200deg, #02b3a1, #009C8D);*/
+    /*transform: translate3d(-22mm, 22mm, 0mm) rotate(-90deg);*/
+    /*width: 58.42mm;*/
+    /*height: 14.31mm;*/
+    /*padding: 3.6mm 0 0 5mm;*/
+    /*text-transform: uppercase;*/
+    background: linear-gradient(200deg, #02b3a1, #009C8D);
+    transform: translate3d(-17mm, 18mm, 0mm) rotate(-90deg);
+    width: 50mm;
+    height: 14.31mm;
+    padding: 3.6mm 0 0 5mm;
+    text-transform: uppercase;
+}
+.page-label span{
+    font-size: 5.2mm;
+    font-weight: 700;
+    color: #fff;
+}
+
+.page-label-land{
+    width: 6cm;
+    padding: 3mm 3mm 3mm 12mm;
+    background: #02b3a1;
+    margin-left: 0;
+    color: #fff;
+    background: linear-gradient(to right, #02b3a1, #009C8D);
+}
+.page-label-land p{
+    font-weight: 600;
+}
+.page-label-land span{}
+
+.number-land{}
+
+/*- Page Header -*/
+.page-header{
+    margin-top: 8mm;
+}
+.page-heads{
+    padding-top: 8mm;
+    padding-right: 12mm;
+}
+.company-logo {
+    text-align: right;
+}
+.company-logo img{
+    height: 10mm;
+}
+.page-document-info{}
+.page-number{}
+.page-number p{
+    font-weight: 600;
+    margin-bottom: 1mm;
+}
+.page-number span{
+    font-size: 4.5mm;
+}
+.page-description{margin-top: 5mm;}
+.page-description p{font-size: 5mm;font-weight: 600; margin-bottom: 1mm;}
+.page-description span{font-size: 4.5mm;}
+.page-description .jb-heading{font-size: 6.3mm;font-weight: 600;padding-top: 5mm;}
+
+/*-- Page Body --*/
+.page-body{margin-top: 6mm;}
+.recipient{}
+.recipient p{font-size: 5mm; font-weight: 600;margin-bottom: 1mm;}
+.full-address{text-align: left;}
+.full-address span{font-size: 4.5mm;line-height: 1.3;}
+.full-address .address{}
+.full-address .district{}
+.full-address .teritory{}
+
+.letter-content{margin-bottom: 2cm;}
+.letter-body{margin-top: 1cm;}
+.letter-body p:first-child{
+    text-indent: 0;
+}
+.letter-body p{
+    text-align: justify;
+    line-height: 1.5;
+    text-indent: 1cm;
+}
+
+.letter-signature{}
+.letter-signature p{margin-bottom: 1mm;}
+.signature-box{height: 2.5cm;}
+.signature-pic{}
+.signature-pic .pic-name{font-weight: 700;text-decoration: underline;margin-bottom: 1mm;}
+.signature-pic .pic-role{}
+
+.page-footer{position: absolute;bottom: 1cm;}
+.company-footer{}
+.company-footer address{font-size: 3.5mm;line-height: 1.4;font-style: normal;}
+.company-footer .company-name{color: #02b3a1;margin-bottom: 3mm;}
+
+.company-contact{}
+.company-list:not(:first-child){margin-top: 3mm;}
+.phone{}
+.company-contact-item{margin-left: 2mm;transform: translateY(-1mm);}
+.company-contact-item span{font-size: 3.5mm;}
+
+.icon-color{}
+.icon-color span{color: #02b3a1;}
+
+
+/*- Main Table -*/
+.main-table{margin-top: 8mm;margin-bottom: 4mm;}
+.main-table p{font-size: 5mm;font-weight: 600;}
+.main-table .table-content{
+    margin: 0;
+    width: 100%;
+    margin-top: 4mm;
+    text-align: center;
+    border-collapse: collapse;
+}
+.main-table .table-header{}
+.main-table .table-header td{padding: 3mm 0 4mm 0;font-size: 4mm;font-weight: 600;border-bottom: .6mm solid #9e9e9e;}
+.main-table .table-item{}
+.main-table .table-item:nth-child(odd){background: #f5f5f5;}
+.main-table .table-item td{border-bottom: .5mm solid #9e9e9e;padding: 4mm 0;font-size: 4mm;}
+.main-table .table-item .product-name{text-align: left;}
+.main-table .table-item .product-name p{font-size: 4mm;}
+.main-table .table-item .product-name span{font-size: 4mm;font-weight: 400;}
+.result-row td{background: #dedede;color: #383838; font-weight: 600;}
+.result-row th{background: #dedede;color: #383838; font-weight: 600;}
+
+.summary-container{background: #eee;padding: 4mm 6mm;}
+.summary-container p{font-size: 4mm;}
+.summary-container-large{padding: 5mm 6mm;background: #02b3a1;font-size: 4mm;font-weight: 600;color: #fff;}
+
+.notes{font-size: 4mm;margin: 2mm 0;}
+.specification-container{
+    height: 100%;
+    position: relative;
+    padding: 8mm;
+    border: .5mm solid #bdbdbd;
+    border-radius: 1mm;
+}
+.specification-inner{}
+.specification-title{margin-bottom: 5mm;}
+.specification-title p{font-size: 4mm;font-weight: 600;}
+.specification-title span{font-size: 4mm;}
+.specification-item{margin-top: 5mm;}
+.specification-inner p{font-size: 4mm;font-weight: 600;}
+.specification-subitem{margin-top: 2mm;}
+
+.subitem-content{display: inline-flex;margin: 0mm;}
+.subitem-content:nth-child(3n + 1){margin-left: 0;}
+.subitem-content .subitem-icon{font-size: 8mm;color: #02b3a1;margin-right: 3mm;}
+.subitem-content .subitem-icon span{}
+.subitem-content .subitem-description{display: inline-grid;margin: 2mm 0;}
+.subitem-content .subitem-description .keys{font-size: 3.4mm;padding-bottom: 1mm;}
+.subitem-content .subitem-description .value{font-size: 3.4mm;font-weight: 600;}
+
+.default-table{
+    border-collapse: collapse;
+    margin: 0;
+    width: 100%;
+    margin-top: 4mm;
+    text-align: center;
+    font-size: 3.4mm;
+}
+.default-table .table-header{}
+.default-table .table-header td{}
+.default-table .table-header th{border: 1px solid #000;padding: 3mm;}
+.default-table .table-content{}
+.default-table .table-content td{border: 1px solid #000;padding: 3mm;font-size: 3.5mm;}
+.default-table .table-content td img{max-width: calc(100% - 27%);}
+
+.terms-container{margin: 10mm 0;}
+.terms-container .terms-header{}
+.terms-container .terms-header p{font-weight: 600;}
+.terms-container .terms-header .translate{color: #02b3a1;}
+
+.terms-container .terms-content{margin-top: 5mm;}
+.terms-container .terms-content .term-number{margin-right: 5mm;}
+.terms-container .terms-content .term-original{margin: 0 0 2mm 0;}
+.terms-container .terms-content .term-translated{color: #02b3a1;}
+
+
+.information-sheet{margin-top: 10mm;}
+.information-sheet p{
+    font-size: 5mm;
+    font-weight: 600;
+}
+.information-sheet .information-box{margin-top: 5mm;}
+.information-sheet .information-box .info-content-box{margin: 3mm;}
+.information-sheet .information-box .info-content-box:nth-child(2n+1){margin-left: 0mm;}
+.information-sheet .information-box .info-content-box p{font-size: 4.5mm;margin-bottom: 1mm;}
+.information-sheet .information-box .info-content-box span{font-size: 4.5mm;}
+
+.information-image-box{
+    margin-top: 5mm;
+    height: 14cm;
+    padding: 5mm;
+    border: .5mm solid #bdbdbd;
+}
+.information-image-box .image-content{}
+.information-image-box .image-content img{width: 100%;}
+
+
+.information-notes{margin-top: 1cm;}
+.note-box{margin-top: 0;}
+.information-notes p{font-size: 5mm; font-weight: 600;}
+.information-notes .information-note-box{background: #eee;margin-top: 5mm;padding: 5mm;min-height: 11.5cm;}
+.information-notes .information-note-box .note-content{white-space: pre;}
+
+.information-summary{
+    padding: 5mm;
+    background: #02b3a1;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 5mm;
+}
+.information-summary p{}
+
+
+.client-signature{margin-top: 15mm;}
+.client-signature .client-signature-box{
+    width: 5cm;
+    height: 6.5cm;
+    border: .5mm solid #bdbdbd;
+    margin-right: 10mm;
+    padding: 5mm;
+    text-align: center;
+}
+.client-signature .client-signature-box:after{
+    content: "* Please give full name, sign, and company stamp.";
+    font-size: 3mm;
+    color: #a0a0a0;
+    position: relative;
+    top: 8mm;
+}
+.client-signature .client-signature-box p{
+
+}
+.client-signature-field{
+    height: 30mm;
+    margin-top: 2mm;
+    border-bottom: .5mm solid #bdbdbd;
+}
+.client-signature-field:before{
+    content: "Client Representative";
+    font-size: 3.2mm;
+    color: #a0a0a0;
+    position: relative;
+    top: 31mm;
+}
+
+
+/*--- Invoice ---*/
+.invoice{}
+.invoice-information{
+    padding: 6mm 12.5mm;
+    background: #424242;
+}
+.invoice-recipient{}
+.sender:before{
+    content: "Dari :";
+    color: #fff;
+    font-size: 4.5mm;
+    font-weight: 600;
+    position: relative;
+}
+.recipient:before{
+    content: "Ditagihkan ke :";
+    color: #fff;
+    font-size: 4.5mm;
+    font-weight: 600;
+    position: relative;
+}
+
+.invoice-recipient p{font-size:4mm; color: #fff;font-weight: 600;margin-bottom: 2mm; margin-top: 3mm;}
+.invoice-recipient span{font-size:4mm; color: #ffffff; line-height: 1.4;}
+
+.arrow-icon{
+    font-size: 8mm !important;
+    background: #909090;
+    padding: 7mm;
+    border-radius: 50%;
+    color: #fff;}
+.arrow-icon span{}
+
+
+.invoice-summary{
+    background: #e8e8e8;
+    width: 105mm;
+    height: 5cm;
+    margin: 5mm 0 0 auto;
+    /*padding: 7mm 12mm 0 8mm;*/
+    padding: 7mm 12mm 0 0;
+}
+.invoice-summary hr{
+    margin: 4mm 0 4mm 8mm;
+}
+.invoice-summary .invoice-price-descriptor{
+    margin-bottom: 2.8mm;
+    padding: 0 0 0 8mm;
+}
+.invoice-summary .invoice-price-descriptor p{
+    font-weight: 600;
+    font-size: 4mm;
+}
+.invoice-price-summary{
+    padding: 5mm 12mm 5mm 8mm;
+    background: #02b3a1;
+    width: 105mm;
+    margin-top: 5mm;
+}
+.invoice-price-summary .invoice-summary-descriptor{}
+.invoice-price-summary .invoice-summary-descriptor p{
+    font-size: 4mm;
+    font-weight: 600;
+    color: #fff;
+}
+
+
+.how-to-transfer{
+    padding: 6mm;
+    background: #f5f5f5;
+    margin: 10mm 0 5mm 0;
+}
+.transfer-destination{
+    margin-bottom: 5mm;
+}
+.transfer-destination p{font-size: 4mm;font-weight: 600; margin-bottom: 1mm;}
+.transfer-destination .tc-title{margin-bottom: 2mm;}
+.transfer-destination span{font-size: 4mm;font-weight: normal;}
+.transfer-destination span a{color: #02b3a1;}
+.transfer-destination .tc-span{line-height: 1.8;margin-bottom: 0;}
+
+.banks{}
+.banks .bank-list{display: flex;}
+.banks .bank-list .bank-logo{width: 20mm;margin: 0;}
+.banks .bank-list .bank-logo img{width: 100%;}
+.banks .bank-list .bank-name{margin-left: 0mm;}
+.banks .bank-list .bank-name p{font-size: 4mm;font-weight: normal;}
+.banks .bank-list .bank-name span{
+    font-size: 4mm;
+    font-weight: 600;
+}
+
+.receipt-detail{margin-top: 3mm;}
+.receipt-detail p{font-weight: 600;font-size: 4mm;}
+.receipt-detail span{font-weight: normal;font-size: 4mm;}
+
+
+/*--- SPK ---*/
+.spk-preambule{}
+.spk-preambule .spk-information{
+    background: #f5f5f5;
+    padding: 6mm 12mm;
+}
+.spk-information .spk-information-item{}
+.spk-information .spk-information-item p{
+    font-size: 4mm;
+    margin: 1mm 0;
+}
+.spk-mockup{
+    margin-top: 10mm;
+}
+.spk-mockup .spk-mockup-box{
+    width: 100%;
+    border: 1px solid #bdbdbd;
+    height: 21cm;
+    padding: 5mm;
+    text-align: center;
+}
+.spk-mockup .spk-mockup-box img{
+    height: 100%;
+}
+
+.spk-content{
+    margin-top: 10mm;
+}
+.spk-content p{
+    font-size: 4.5mm;
+    font-weight: 600;
+}
+.spk-size-summary{
+    font-size: 4mm;
+    padding: 4mm 0 4mm 6mm;
+    background: #f5f5f5;
+}
+.spk-size-summary p{font-size: 4mm;}
+.spk-size-summary span{
+    font-size: 4mm;
+    font-weight: 600;
+    padding: 4mm 6mm;
+    background: #02b3a1;
+    color: #fff;
+}
+.spk-table .table-header th{
+    font-size: 4mm;
+    padding: 3mm;
+}
+.spk-table .table-content td{
+    font-size: 4mm;
+    padding: 3mm;
+}
+.spk-approval{}
+.spk-approval .spk-approval-box, .do-approval-box{
+    width: 3cm;
+    height: 4cm;
+    border: 1px solid #bdbdbd;
+    margin-right: 12mm;
+    text-align: center;
+    padding: 3mm;
+    background: #fff;
+}
+.do-approval-box{
+    margin-right: 0;
+    width: 4cm;
+}
+.spk-approval-box:before{
+    content: 'Paraf';
+    font-size: 3.5mm;
+    font-weight: 600;
+}
+
+.note-maker:before{
+    content: 'Pembuat';
+    font-size: 3.5mm;
+    font-weight: 600;
+}
+.note-accounting:before{
+    content: 'Accounting';
+    font-size: 3.5mm;
+    font-weight: 600;
+}
+.note-recipient:before{
+    content: 'Penerima';
+    font-size: 3.5mm;
+    font-weight: 600;
+}
+.note-maker:after, .note-accounting:after, .note-recipient:after{
+    content: "";
+    border-bottom: 1px dashed #bdbdbd;
+    padding: 0 11.5mm;
+    position: absolute;
+    transform: translate3d(-19mm, 32mm, 0mm);
+}
+
+.spk-approval-box:after{
+    content: "";
+    border-bottom: 1px dashed #bdbdbd;
+    padding: 0 11.5mm;
+    position: absolute;
+    transform: translate3d(-16mm, 32mm, 0mm);
+}
+.spk-detail {
+    padding: 5mm;
+    width: 247mm;
+    height: 185mm;
+    border: 1px solid #bdbdbd;
+    transform: rotate(90deg) translate(30mm, 30mm);
+    position: relative;
+    top: 5mm;
+    margin: 0;
+}
+.spk-detail .single-image{}
+.spk-detail .single-image img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.spk-artwork{
+    height: 95mm;
+    padding: 5mm;
+}
+.spk-artwork img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.spk-name-list{
+    margin-top: 5mm;
+    border: 1px solid #bdbdbd;
+    height: 242mm;
+    padding: 5mm;
+}
+.spk-name-list img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.spk-prod-notes{
+    margin-top: 5mm;
+    padding: 5mm 8mm;
+    background: #fff4c0;
+}
+.spk-prod-notes .notes-list{margin: 3mm 0;}
+.spk-prod-notes .notes-list span{}
+
+.content-field-box{
+    padding: 3mm;
+    width: 6cm;
+    margin-left: 0;
+    border-bottom: 1px solid;
+}
+
+.bill-of-material{}
+.bill-of-material p{
+    font-weight: 600;
+}
+.table-box{
+    width: 5cm;
+    height: 3cm;
+    border: 1px solid;
+    margin: 0;
+}
+.table-box span{
+    font-size: 3mm;
+    color: #bdbdbd;
+}
+.checkbox{
+    width: 5mm;
+    height: 5mm;
+    border: 1px solid #424242;
+}
+.has-padding{
+    padding-left: 6mm !important;
+    padding-right: 6mm!important;
+}
+
+.vendor-qc-approval{}
+.vendor-qc-approval .approval-box{
+    width: 5cm;
+    height: 5cm;
+    border: 1px solid #424242;
+    padding: 5mm;
+}
+.vendor-qc-approval .approval-box:before{
+    content: "Quality Control MKP";
+}
+.vendor-qc-approval .approval-box:after{
+    content: "";
+    padding: 20mm;
+    border-bottom: 1px dashed #505050;
+    position: absolute;
+    transform: translate(-39mm, -1mm);
+}
+.vendor-qc-approval .approval-name{
+    padding: 2mm;
+    border: 1px solid #424242;
+    width: 5cm;
+    margin: 0;
+    position: relative;
+    top: -1px;
+}
+.vendor-qc-approval .approval-name:before{
+    content: ":";
+    position: absolute;
+    transform: translate(19mm, 0mm);
+}
+.vendor-qc-approval .approval-role{
+    padding: 2mm;
+    border: 1px solid #424242;
+    width: 5cm;
+    margin: 0;
+    position: relative;
+    top: -2px;
+}
+.vendor-qc-approval .approval-role:before{
+    content: ":";
+    position: absolute;
+    transform: translate(19mm, 0mm);
+}
+.vendor-qc-approval .approval-date{
+    padding: 2mm;
+    border: 1px solid #424242;
+    width: 5cm;
+    margin: 0;
+    position: relative;
+    top: -3px;
+}
+.vendor-qc-approval .approval-date:before{
+    content: ":";
+    position: absolute;
+    transform: translate(19mm, 0mm);
+}
+
+.information-section-area{
+    margin-bottom: 5mm;
+    border-bottom: 1px solid #9e9e9e;
+}
+
+.information-section-header{
+    font-weight: 600;
+    margin-bottom: 2mm;
+}
+.page-content{
+    margin-bottom: 5mm;
+}
+.page-content .content-header{
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 4mm;
+}
+.page-content .content-inner{
+    font-size: 4mm;
+}
+
+.product-list-box{
+    margin-bottom: 5mm;
+}
+.product-list-item{
+    padding: 4mm;
+    border-left: 5px solid #02b3a1;
+    border-radius: 1mm;
+    background: rgba(111,181,174,0.12);
+    margin-bottom: 5mm;
+}
+.resume-list{
+    background: #02b3a1;
+    color: #fff;
+}
+.resume-list-subtotal{
+    background: #dedede;
+    color: #383838;
+    border-left-color: transparent;
+}
+.product-list-item .list-item-key{
+    font-size: 4mm;
+    font-weight: 600;
+}
+.product-list-item .list-item-value{
+    font-size: 4mm;
+}
+.product-list-item .list-item-counter{
+    font-size: 4mm;
+    font-weight: 600;
+}
